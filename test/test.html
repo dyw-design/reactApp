@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动画演示</title>
+    <style>
+        div{
+            /*background:green;*/
+            height:100px;
+            width:100px;
+        }
+        img{
+            width:80%;
+            -webkit-animation-name: myfirst;
+            -webkit-animation-duration: 2s;
+            -webkit-animation-delay: 2s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-direction: alternate;
+            -webkit-animation-play-state: running;
+        }
+        @-webkit-keyframes myfirst /* Safari 和 Chrome */
+        {
+            from {
+                /*background:green;*/
+                width:80%;
+            }
+            to {
+                width:100%;
+                /*background:red;*/
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="../public/asserts/img/ad-001.png" alt="">
+    </div>
+</body>
+</html>

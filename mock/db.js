@@ -6,13 +6,11 @@ let mr = Mock.Random;//提取mock的随机对象
 //随机id和图片
 let mapData = (n) => {
   var data = [];
-
   for (var i = 1; i <= n; i++) {
-
     data.push({
       id: i,
       title: "@ctitle(8,12)",
-      des: "@csentence(10, 20)",
+      des: "@csentence(10,20)",
       time: "@integer(1553425967486,1553475967486)",
       detail:{
         auth:"@cname()",
@@ -23,14 +21,30 @@ let mapData = (n) => {
   }
   return data
 };
-
+let getGoods = (n) => {
+  var goods = [];
+  for (var i = 1; i <= n; i++) {
+    goods.push({
+      id: i,
+      title: "@ctitle(12,16)",
+      sub_title: "@ctitle(6,12)",
+      des: "@csentence(10,20)",
+      time: "@integer(1553425967486,1553475967486)",
+      banner:mr.image('180x180',mr.color(),mr.cword(1)),
+      price: '@integer(80,200)',
+      origin_price: '@integer(120,300)',
+      brand:'@ctitle(3,6)'
+    })
+  }
+  return goods
+};
 //json-server 要对象||函数(返回mock后的数据)
 module.exports = {
   ...Mock.mock({
     'home': mapData(32),//解决 auth_icon 不随机
-    'follow': mapData(21),
+    'follow': mapData(210),
     'column': mapData(11),
-    'banner|2': [
+    'banner|6': [
       {
         // 属性 id 是一个自增数，起始值为 1，每次增 1
         'id|+1': 1,
@@ -38,12 +52,16 @@ module.exports = {
         sub_title: "@ctitle(6,12)",
         banner: mr.image('750x501', mr.color(), mr.cword(4,10)),//banner不变
         time: "@integer(1565533039824,1565833039824)",
+        price: '@integer(80,200)',
+        origin_price: '@integer(120,300)',
+        brand:'@ctitle(3,6)',
         detail:{
           icon:mr.image('20x20', mr.color(), mr.cword(1,2)),//20X20尺寸
           auth:"@cname()",//百家姓
           content:"@cparagraph(10,40)"//正文
         }
       }
-    ]
+    ],
+    'glike': getGoods(100),
   })
 };

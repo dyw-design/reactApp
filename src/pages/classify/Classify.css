@@ -1,0 +1,137 @@
+.menu-left{
+    width:30%;
+    float:left;
+    overflow:hidden;
+}
+.menu-left ul {
+    margin-top:40px;
+    border-top:1px solid #EFEAEE;
+}
+.menu-left ul li {
+    width:100%;
+    height:40px;
+    line-height:40px;
+    border-right:1px solid #EFEAEE;
+    border-bottom:1px solid #EFEAEE;
+    text-align:center;
+}
+.content-right{
+    width:70%;
+    overflow:hidden;
+    position:relative;
+}
+.nav-top{
+    width:100%;
+    border-top:1px solid #EFEAEE;
+    border-bottom:1px solid #EFEAEE;
+    display:flex;
+    margin-top:40px;
+    position:relative;
+}
+.nav-top span{
+    flex:1;
+    line-height:40px;
+    text-align:center;
+}
+
+.content-right ul {
+    height:540px;
+    overflow:auto;
+    
+}
+.content-right ul.goods-display{
+    display:block;
+}
+.content-right ul.goods-hide{
+    display:none;
+}
+.content-right ul li{
+    height:80px;
+    overflow:hidden;
+    border-bottom:1px solid #EFEAEE;
+}
+.content-right ul li img{
+    display:block;
+    height:60px;
+    width:60px;
+    float:left;
+    margin:10px 0 0 10px;
+}
+.content-des{
+    float:right;
+    width:180px;
+}
+.content-des p{
+    font:14px/20px "";
+    margin-top:10px;
+}
+.content-opt{
+    overflow: hidden;
+    line-height:30px;
+}
+.content-opt span{
+    display:block;
+    float:left;
+    width:60px;
+}
+.content-opt p{
+    margin:0;
+    float:right;
+    margin-right:10px;
+    height:30px;
+    lien-height:30px;
+    padding:5px 0 0 0;
+}
+.content-opt p i{
+    font-style:normal;
+    display:inline-block;
+    height:20px;
+    width:20px;
+    border-radius: 50%;
+    border:1px solid #EFEAEE;
+    text-align:center;
+}
+
+.content-opt p b{
+    /*float:right;*/
+    display:inline-block;
+    margin:0 5px;
+    line-height:20px;
+    font-weight: normal;
+}
+
+.menu-left ul li.menu-active{
+    border-right:1px solid orange;
+    color:orange;
+}
+.menu-left ul li.menu-unActive{
+    border-right:1px solid #EFEAEE;
+    color:#666;
+}
+
+/*.content-right ul.allClassify{*/
+/*    */
+/*}*/
+.content-right .allClassify{
+    /*height:80px;*/
+    margin-bottom:57px;
+    background:#fff;
+    -webkit-transform:translateZ(0px);
+    position:fixed;
+    text-align:center;
+    z-index:999;
+    overflow:hidden;
+    display: none;
+    border-bottom: 1px solid #EFEAEE;
+    -webkit-transition:2s;
+}
+.content-right .allClassify li{
+    width:30%;
+    margin-left:2%;
+    float:left;
+    font:14px/2 "";
+    font-family: "Myriad Set Pro","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
+    text-align:center;
+    color:#666;
+    font-weight:normal;
+}

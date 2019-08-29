@@ -1,3 +1,9 @@
+/*.am-tab-bar-bar{*/
+/*    position: fixed;left:0;bottom:0;*/
+/*}*/
+/*am-tabs-tab-bar-wrap{*/
+/*    position:fixed;*/
+/*}*/
 .footer{
-    background:black;
+   position:fixed;left:0;bottom:0;right:0;
 }
