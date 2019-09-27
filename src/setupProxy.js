@@ -10,7 +10,7 @@ module.exports = function(app) {
   );
   app.use(
     proxy("/mock", {
-      target:'http://129.211.35.17:3333',
+      target:'http://localhost:3333',
       changeOrigin: true
     })
   );
